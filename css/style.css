@@ -1,0 +1,234 @@
+/* import fonts from fonts.css file */
+@import url(./fonts.css);
+
+/* CSS Variables */
+@import url(./partials/_variables.css);
+
+/* Start Navigation */
+
+.header_area .main-menu .navbar{
+    padding: 1rem 3.5rem;
+}
+
+.header_area .main-menu .nav-item .nav-link {
+    font: bold 500 15px/2px var(--tahoma);
+    text-transform: uppercase;
+    padding: 1.7rem;
+    color: var(--title-color);
+}
+
+.header_area .main-menu .navbar-nav .active {
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header_area .main-menu .navbar-nav a:hover{
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* End Navigation */
+
+/* Start Banner Area */
+
+.site-main .site-banner .site-title h1 {
+    color: white;
+    font-size: 4.5rem;
+}
+
+
+
+.site-main .site-banner .site-title h4 {
+    color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 1.5rem;
+}
+
+.site-main .site-banner .banner-image > img {
+    padding: 7rem 0;
+    width: 90rem;
+}
+
+.letter {
+    animation-duration: 1.25s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    display: inline-block;
+}
+
+.letter:hover {
+    color: var(--primary-color2);
+    /* animation: rubberBand 5s infinite; */
+    animation-name: rubberBand;
+}
+
+@keyframes rubberBand {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        transform: scale3d(.95, 1.05, 1);
+    }
+    75% {
+        transform: scale3d(1.05, .95, 1);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.about-me-header {
+    color: var(--primary-color2);
+    text-align: left;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.about-title-section {
+    color: white;
+    text-align: left;
+    padding-bottom: 2%;
+}
+
+.about-me-closer {
+    color: var(--primary-color2);
+    text-align: left;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.accordion-button {
+    font-size: inherit;
+    color: white;
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0%) invert(90%);
+}
+
+.accordion-button:focus {
+    box-shadow: inherit;
+
+}
+
+.accordion-item {
+    border: 2px solid white;
+}
+
+.accordion-button:not(.collapsed) {
+    color: white;
+}
+
+.accordion-body {
+    color: white;
+}
+
+.favorite-color {
+    color: var(--primary-color2);
+}
+
+.experience-title {
+    color: white;
+    padding-top: 2%;
+}
+
+.card-header {
+    text-align: center;
+}
+
+.card-title {
+    text-align: center;
+}
+
+/* End Banner Area */
+
+.experience-title {
+    text-align: left;
+    padding-bottom: 2%;
+}
+
+.experience-title-section {
+    padding-bottom: 2%;
+}
+
+.experience-closer {
+    color: white;
+    text-align: left;
+    padding-bottom: 2%;
+}
+
+.experience-section {
+    color: var(--primary-color2);
+}
+
+.experience-title-section {
+    text-align: left;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.portfolio-header {
+    color: var(--primary-color2);
+}
+
+.portfolio-closer {
+    color: var(--primary-color2);
+}
+
+.contact-header {
+    color: white;
+    text-align: left;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.contact-closer {
+    color: white;
+    text-align: left;
+    padding-bottom: 2%;
+}
+
+.contact-body {
+    color: var(--primary-color2);
+    text-align: left;
+}
+
+.contact-body-text {
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: left;
+}
+
+a:link{
+    color: white;
+    text-decoration: underline;
+}
+a:visited{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: var(--primary-color2);
+    text-decoration: none;
+}
+a:active{
+    color: white;
+    text-decoration: none;
+}
+
+.rocket-text {
+    color: white;
+}
