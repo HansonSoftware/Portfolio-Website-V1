@@ -1,32 +1,79 @@
-/* import fonts from fonts.css file */
-@import url(./fonts.css);
+/* Author: Hayden Hanson */
+/* Heyo! If you're reading this i'd like to point out that although most of the code here is my own, some sections have come from various inspirational sources.
+   Thanks for stopping by :D! */
+
+/* body */
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
 
 /* CSS Variables */
-@import url(./partials/_variables.css);
+
+:root {
+    --primary-color: #44dcac;
+    --primary-color2: #4fee99;
+    --title-color: #ffffff;
+    --text-color: #777777;
+    --border-color: #201f17;
+    --gradient-color: linear-gradient(90deg, #44dcac 0%, #4fee99 100%);
+    --background-color: #212529;
+    --primary-color3: #f77062;
+
+    --shadow-color: 0px 10px 30px rgba(85, 225, 87, 0.37);
+    --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+
+    --scrollcolor: #fff;
+    --scrollbackground: #909294;
+
+    /* Font Family Shorthand */
+    --tahoma: 'Tahoma';
+}
+
+/* font-face Used throughout the site */
+
+@font-face {
+    font-family: Lato;
+}
 
 /* Start Navigation */
 
-.header_area .main-menu .navbar{
+ .main-menu .navbar{
     padding: 1rem 3.5rem;
 }
 
-.header_area .main-menu .nav-item .nav-link {
-    font: bold 500 15px/2px var(--tahoma);
+ .main-menu .nav-item .nav-link {
+    padding: 1.5rem;
+    font-weight: normal;
     text-transform: uppercase;
-    padding: 1.7rem;
     color: var(--title-color);
 }
 
-.header_area .main-menu .navbar-nav .active {
+ .main-menu .navbar-nav .active {
+    background: var(--primary-color2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+ .main-menu .navbar-nav a:hover{
     background: var(--gradient-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.header_area .main-menu .navbar-nav a:hover{
-    background: var(--gradient-color);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.navbar-toggler {
+    color: white;
+}
+
+.navbar-toggler:hover {
+    color: white;
+}
+
+.navbar-toggler:active {
+    color: white;
 }
 
 /* End Navigation */
@@ -34,23 +81,22 @@
 /* Start Banner Area */
 
 .site-main .site-banner .site-title h1 {
-    color: white;
-    font-size: 4.5rem;
+    color: var(--title-color);
 }
 
-
-
-.site-main .site-banner .site-title h4 {
+.site-main .site-banner .site-title h3 {
     color: white;
     padding-top: 2%;
-    padding-bottom: 2%;
-    font-size: 1.5rem;
 }
 
 .site-main .site-banner .banner-image > img {
-    padding: 7rem 0;
+    padding: 90rem;
     width: 90rem;
 }
+
+/* End Banner area */
+
+/* Start bouncy letter area */
 
 .letter {
     animation-duration: 1.25s;
@@ -66,28 +112,18 @@
 }
 
 @keyframes rubberBand {
-    from {
-        transform: scale3d(1, 1, 1);
-    }
-    30% {
-        transform: scale3d(1.25, 0.75, 1);
-    }
-    40% {
-        transform: scale3d(0.75, 1.25, 1);
-    }
-    50% {
-        transform: scale3d(1.15, 0.85, 1);
-    }
-    65% {
-        transform: scale3d(.95, 1.05, 1);
-    }
-    75% {
-        transform: scale3d(1.05, .95, 1);
-    }
-    to {
-        transform: scale3d(1, 1, 1);
-    }
+    from { transform: scale3d(1, 1, 1); }
+    30% { transform: scale3d(1.25, 0.75, 1); }
+    40% { transform: scale3d(0.75, 1.25, 1); }
+    50% { transform: scale3d(1.15, 0.85, 1); }
+    65% { transform: scale3d(.95, 1.05, 1); }
+    75% { transform: scale3d(1.05, .95, 1); }
+    to { transform: scale3d(1, 1, 1); }
 }
+
+/* End Bouncy letter area */
+
+/* Start about me area */
 
 .about-me-header {
     color: var(--primary-color2);
@@ -109,12 +145,18 @@
     padding-bottom: 2%;
 }
 
+    /* Start accordion section */
+
 .accordion-button {
     font-size: inherit;
     color: white;
 }
 
 .accordion-button:not(.collapsed)::after {
+    filter: brightness(0%) invert(90%);
+}
+
+.accordion-button::after {
     filter: brightness(0%) invert(90%);
 }
 
@@ -135,31 +177,42 @@
     color: white;
 }
 
+    /* End accordion area */
+
 .favorite-color {
     color: var(--primary-color2);
 }
 
-.experience-title {
-    color: white;
-    padding-top: 2%;
+/* End about me section */
+
+.card {
+    height: 200%;
 }
 
 .card-header {
+    color: white;
     text-align: center;
 }
 
 .card-title {
+    color: white;
     text-align: center;
 }
 
 /* End Banner Area */
 
-.experience-title {
+/* Start Skills area */
+
+.skills-title-section {
+    color: var(--primary-color2);
     text-align: left;
     padding-bottom: 2%;
 }
 
-.experience-title-section {
+.experience-title {
+    color: white;
+    padding-top: 2%;
+    text-align: left;
     padding-bottom: 2%;
 }
 
@@ -173,11 +226,125 @@
     color: var(--primary-color2);
 }
 
-.experience-title-section {
-    text-align: left;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    /* Start skills scroll-wheel section */
+
+* {
+    box-sizing: border-box;
 }
+
+*:focus, *:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slider {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.slider__content {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    scrollbar-color: var(--scrollcolor) var(--scrollbackground);
+}
+.slider__content::-webkit-scrollbar {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 1rem;
+    background: var(--scrollbackground);
+}
+.slider__content::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: var(--scrollcolor);
+}
+.slider__content::-webkit-scrollbar-track {
+    border-radius: 1rem;
+    background: var(--scrollbackground);
+}
+
+.slider__item {
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-width: 100%;
+    width: 100%;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 1;
+}
+@media (min-width: 460px) {
+    .slider__item {
+        aspect-ratio: 2/3;
+        min-width: calc((100% / 2) - 2rem);
+    }
+}
+@media (min-width: 940px) {
+    .slider__item {
+        min-width: calc((100% / 3) - 4rem);
+    }
+}
+
+.slider__nav {
+    margin: 1rem 0 4rem;
+    width: 100%;
+    padding: 1px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.slider__nav { justify-content: center; padding-bottom: -20px}
+
+
+.slider__nav__button {
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    border-radius: 2rem;
+    background: #fff;
+    color: #203239;
+    padding: 0.5rem 1rem;
+    pointer-events: none;
+    transition: 0.2s ease-out;
+    opacity: 0.25;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: black;
+}
+.slider__nav__button--active {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+    /* end skills scroll-wheel section */
+
+    /* Start card section */
+
+.card-header {
+    text-align: center;
+}
+
+.card-title {
+    text-align: center;
+}
+
+    /* End card section
+
+/* End experience area */
+
+/* Start portfolio area */
 
 .portfolio-header {
     color: var(--primary-color2);
@@ -186,6 +353,10 @@
 .portfolio-closer {
     color: var(--primary-color2);
 }
+
+/* end portfolio area */
+
+/* start contact area */
 
 .contact-header {
     color: white;
@@ -208,27 +379,170 @@
 .contact-body-text {
     color: white;
     padding-top: 1%;
+    display: inline-block;
+    padding-bottom: 2%;
+    text-align: left;
+}
+
+.contact-body-text-green {
+    color: var(--primary-color2);
+    padding-top: 1%;
     padding-bottom: 1%;
     text-align: left;
 }
 
-a:link{
+/* Start resume button */
+
+.custom-btn {
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    border-radius: 2.5rem;
+    background: #fff;
+    color: black;
+    padding: 0.175rem 0.75rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.Resume-Button-Text {
+    font-weight: normal;
+    font-size: 60%;
+
+}
+
+/* end resume button */
+
+/* start a (links) area */
+
+.clicky-text:link{
     color: white;
     text-decoration: underline;
 }
-a:visited{
+.clicky-text:visited{
     color: white;
     text-decoration: none;
 }
-a:hover{
+.clicky-text:hover{
     color: var(--primary-color2);
     text-decoration: none;
 }
-a:active{
-    color: white;
+.clicky-text:active{
+    color: black;
     text-decoration: none;
 }
 
-.rocket-text {
+/* end a area */
+
+/* start footer area */
+
+.social-icon:link{
+    color: var(--background-color);
+}
+.social-icon:visited{
+    color: var(--background-color);
+}
+.social-icon:hover{
+    color: var(--background-color);
+}
+.social-icon:active{
     color: white;
 }
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+}
+
+.wrapper .icon {
+    position: relative;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+    background: #1877F2;
+    color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: #1DA1F2;
+    color: #ffffff;
+}
+
+.wrapper .top:hover,
+.wrapper .top:hover .tooltip,
+.wrapper .top:hover .tooltip::before {
+    background: #E4405F;
+    color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+    background: #333333;
+    color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+    background: #CD201F;
+    color: #ffffff;
+}
+
+/* end footer area */
