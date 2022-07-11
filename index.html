@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <title>Hayden's Portfolio</title>
 
-    <!-- Bootstrap CSS file -->
+    <!-- CSS Imports -->
     <link rel = "stylesheet" href = "./css/bootstrap-css/bootstrap.min.css">
-    <!-- Custom CSS file -->
     <link rel = "stylesheet" href = "./css/style.css">
+    <!-- JavaScript Imports -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js"></script>
-    <!-- JQuery JS file -->
     <script src = "js/jquery.3.6.0.js"></script>
-    <!-- Bootstrap JS file -->
     <script src = "./js/bootstrap.min.js"></script>
 
 </head>
@@ -194,157 +192,210 @@
                         <div class="slider" x-data="{start: true, end: false}">
                             <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
 
-
+<!--                                Java-->
                                 <div class="slider__item">
                                     <div class="card text-white bg-dark mb-3" style="max-width: 40rem;">
                                     <div class="card-header"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-plain.svg" width="34px" height="34px" alt="java"></div>
                                     <div class="card-body">
                                         <h5 class="card-title">Java</h5>
-                                        <p class="card-text"><ul><li>First programming language that I learned</li><li>I've taken five intensive courses that were 100% Java</li><li>Most of the larger scale pieces of software I've written have been in Java</li><li>I use JUnit 5 for testing</li></ul></p>
-                                        <p>Proficiency: <code>Industry ready</code></p>
+                                        <p class="card-text">
+                                        <ul>
+                                            <li>This is the first programming language that I learned</li>
+                                            <li>I've taken five intensive courses that were focussed on Java</li>
+                                            <li>Some of the "larger scale" pieces of software I've written have been in Java</li>
+                                            <li>I am familiar with using Java SpringBoot for Backend API's</li>
+                                            <li>I know and use JUnit 5 for testing</li>
+                                        </ul>
+                                        <br>
+                                        </p>
+                                        <p>Proficiency: <code>Professional</code></p>
                                     </div>
                                     </div>
                                 </div>
 
+<!--                                Objective C-->
                                 <div class="slider__item">
                                     <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
                                         <div class="card-header"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-plain.svg" width="34px" height="34px" alt="c"></div>
                                         <div class="card-body">
                                             <h5 class="card-title">C</h5>
-                                            <p class="card-text"><ul><li>I have taken two intensive C courses that were 80% C and 20% Assembly</li><li>I have completed C projects implementing dynamic memory allocation and optimization</li><li>I write C in Vim and use Valgrind for testing</li></ul></p>
-                                            <p>Proficiency: <code>Fluent</code></p>
+                                            <p class="card-text">
+                                            <ul>
+                                                <li>I can translate C code to X86 Assembly</li>
+                                                <li>I am familiar with C's ability to use signal handling can be used efficiently</li>
+                                                <li>I have implementing dynamic memory allocation and optimization</li>
+                                                <li>I write C in Vim and use Valgrind for testing</li>
+                                            </ul>
+                                            <br>
+                                            </p>
+                                            <p>Proficiency: <code>Professional</code></p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="slider__item">
-                                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                                        <div class="card-header"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-plain.svg" width="34px" height="34px" alt="c-sharp"></div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">C#</h5>
-                                            <p class="card-text"><ul><li>I wrote programs in C# during the development of Corporate™, a sci-fi rogue-lite some friends and I recently developed</li><li>I wrote the title screen, movement scripts and map generation all in C# using Unity</li></ul></p>
-                                            <p>Proficiency: <code>Some experience</code></p>
-                                        </div>
-                                    </div>
-                                </div>
-
+<!--                                Python-->
                                 <div class="slider__item">
                                     <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
                                         <div class="card-header"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-plain.svg" width="34px" height="34px" alt="python"></div>
                                         <div class="card-body">
                                             <h5 class="card-title">Python</h5>
-                                            <p class="card-text"><ul><li>I have taken one course that was 100% python</li><li>Although python is not my first pick, I can type this language fluently</li><li>Most of my knowledge from other programming languages transfers over when working with python</li></ul></p>
-                                            <p>Proficiency: <code>Fluent</code></p>
+                                            <p class="card-text">
+                                            <ul>
+                                                <li>I have completed a lot of "smaller" projects in Python</li>
+                                                <li>Although python is not my first language pick when programming, I can code with this language fluently</li>
+                                                <li>Most of my knowledge from other programming languages transfers over when working with python</li>
+                                            </ul>
+                                            <br>
+                                            </p>
+                                            <p>Proficiency: <code>Moderate</code></p>
                                         </div>
                                     </div>
                                 </div>
 
+<!--                                Web-->
                                 <div class="slider__item">
                                     <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                                        <div class="card-header">{ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" width="24px" height="24px" alt="html">  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" width="24px" height="24px" alt="css">  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" width="24px" height="24px" alt="java-script"> }</div>
+                                        <div class="card-header">{ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" width="24px" height="24px" alt="html">  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" width="24px" height="24px" alt="css">  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" width="24px" height="24px" alt="java-script"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" width="28px" height="28px" alt="bootstrap"> }</div>
                                         <div class="card-body">
                                             <h5 class="card-title">Web</h5>
-                                            <p class="card-text"><ul><li>I have certifications in all three of these languages from sololearn.com</li><li>I've made two websites so far, this being one of them.</li><li>I have enough knowledge to make a site presentable, responsive, and interactive</li></ul></p>
-                                            <p>Proficiency: <code>Fluent</code></p>
+                                            <p class="card-text">
+                                            <ul>
+                                                <li>I have certifications in HTML, CSS and JavaScript from sololearn.com</li>
+                                                <li>I've made two websites so far, this being one of them.</li>
+                                                <li>This website is using some Bootstrap elements!</li>
+                                                <li>I have enough knowledge to make a site presentable, responsive, and interactive</li>
+                                            </ul>
+                                            <br>
+                                            </p>
+                                            <p>Proficiency: <code>Professional</code></p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="slider__item">
-                                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                                        <div class="card-header"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" width="24px" height="24px" alt="bootstrap"></div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Bootstrap</h5>
-                                            <p class="card-text"><ul><li>This website is using some Bootstrap elements!</li><li>I have worked with Bootstrap accordions, carousels, navbars, and some other elements</li><li>I plan to use it again in the future</li></ul></p>
-                                            <p>Proficiency: <code>Some experience</code></p>
-                                        </div>
-                                    </div>
-                                </div>
-
+<!--                                React-->
                                 <div class="slider__item">
                                     <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
                                         <div class="card-header"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="24px" height="24px" alt="react"></div>
                                         <div class="card-body">
                                             <h5 class="card-title">React</h5>
-                                            <p class="card-text"><ul><li>I've had a lot of recommendations to learn React over the year of 2021, so I did</li><li>I have not yet implemented the React framework into any projects but I plan to in the future</li></ul></p>
+                                            <p class="card-text">
+                                            <ul>
+                                                <li>I am currently learning and working with React</li>
+                                                <li>By the beginning of 2023 I will be proficient with React</li>
+                                                <li>I am taking a course focussing intently on Web App Development</li>
+                                                <li>I have a basic understand of this framework, having experience with Flutter</li>
+                                            </ul>
+                                            <br>
+                                            </p>
                                             <p>Proficiency: <code>Some experience</code></p>
                                         </div>
                                     </div>
                                 </div>
 
+<!--                                Flutter-->
                                 <div class="slider__item">
                                     <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
                                         <div class="card-header"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="24px" height="24px" alt="flutter"></div>
                                         <div class="card-body">
                                             <h5 class="card-title">Flutter</h5>
-                                            <p class="card-text"><ul><li>I worked extensively with Flutter to create the Frontend for Pocket Recipes</li><li>I am familiar with the dart programming language as well.</li></ul></p>
-                                            <p>Proficiency: <code>Fluent</code></p>
+                                            <p class="card-text">
+                                            <ul>
+                                                <li>I worked extensively with Flutter to create the Frontend for a mobile application I worked on called Pocket Recipes</li>
+                                                <li>I am familiar with the various widgets and elements that are built in to the Flutter sdk</li>
+                                                <li>I can create beautiful UI's efficiently with this framework</li>
+                                            </ul>
+                                            <br>
+                                            </p>
+                                            <p>Proficiency: <code>Moderate</code></p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="slider__item">
-                                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                                        <div class="card-header"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="34px" height="34px" alt="vs-code"></div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">VS Code</h5>
-                                            <p class="card-text"><ul><li>I love VS Code</li><li>I have been working with this IDE for about 6 years now</li><li>The extensions make my workflow very fast, I normally use VS Code for all my projects</li></ul></p>
-                                            <p>Proficiency: <code>Industry ready</code></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="slider__item">
-                                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                                        <div class="card-header">{ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-plain.svg" width="24px" height="24px" alt="intellij">  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webstorm/webstorm-plain.svg" width="24px" height="24px" alt="webstorm"> }</div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">JetBrains IDE's</h5>
-                                            <p class="card-text"><ul><li>IntelliJ and Webstorm are two more "professional" IDE's that I have worked with</li><li>I can code fluently with IntelliJ</li><li>I am currently writing this website with Webstorm and it's been great so far!</li></ul></p>
-                                            <p>Proficiency: <code>Fluent</code></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="slider__item">
-                                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                                        <div class="card-header"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-plain.svg" width="24px" height="24px" alt="vim"></div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Vim</h5>
-                                            <p class="card-text"><ul><li>I use a zsh terminal when I'm working on my universities remote server (zeus), and I typically use the built-in Vim text editor when writing C code</li><li>I am used to the shortcuts and am fluent when working in Vim</li></ul></p>
-                                            <p>Proficiency: <code>Fluent</code></p>
-                                        </div>
-                                    </div>
-                                </div>
-
+<!--                                Unix-->
                                 <div class="slider__item">
                                     <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
                                         <div class="card-header"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unix/unix-original.svg" width="24px" height="24px" alt="unix"></div>
                                         <div class="card-body">
                                             <h5 class="card-title">Unix</h5>
-                                            <p class="card-text"><ul><li>The remote server mentioned before is all Unix based</li><li>I have been working on this server in various classes for three years now</li><li>I can work efficiently in the Unix operating system with my current experience</li></ul></p>
-                                            <p>Proficiency: <code>Fluent</code></p>
+                                            <p class="card-text">
+                                            <ul>
+                                                <li>I have a large amount of experience working in a remote Unix environment</li>
+                                                <li>I have been working on this server, nicknamed Zeus, in various classes for three years now</li>
+                                                <li>I work efficiently in the Unix operating system with my current experience</li>
+                                            </ul>
+                                            <br>
+                                            </p>
+                                            <p>Proficiency: <code>Moderate</code></p>
                                         </div>
                                     </div>
                                 </div>
 
+<!--                                C#-->
+                                <div class="slider__item">
+                                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                                        <div class="card-header"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-plain.svg" width="34px" height="34px" alt="c-sharp"></div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">C#</h5>
+                                            <p class="card-text">
+                                            <ul>
+                                                <li>I wrote programs in C# during the development of Corporate™, a sci-fi rogue-lite some friends and I recently developed</li>
+                                                <li>I wrote the title screen, movement scripts and map generation all in C# using Unity</li>
+                                                <li>A lot of my C knowledge transfers over when writing C#</li>
+                                            </ul>
+                                            <br>
+                                            </p>
+                                            <p>Proficiency: <code>Some experience</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+<!--                                GitHub-->
                                 <div class="slider__item">
                                     <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
                                         <div class="card-header"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="24px" height="24px" alt="github"></div>
                                         <div class="card-body">
                                             <h5 class="card-title">GitHub</h5>
-                                            <p class="card-text"><ul><li>I use GitHub as a sharing place for my projects</li><li>I plan to use Conventional Commits in all of my projects and contribute to open source projects in the near future</li><li>My profile is linked below in the portfolio section!</li></ul></p>
-                                            <p>Proficiency: <code>Industry ready</code></p>
+                                            <p class="card-text">
+                                            <ul>
+                                                <li>I use GitHub as a sharing place for my projects</li>
+                                                <li>I am familiar with git terminal commands as well</li>
+                                                <li>I plan to use Conventional Commits in all of my projects and contribute to open source projects in the near future</li>
+                                                <li>My profile is linked below in the portfolio section!</li>
+                                            </ul>
+                                            <br>
+                                            </p>
+                                            <p>Proficiency: <code>Professional</code></p>
                                         </div>
                                     </div>
                                 </div>
 
-
+<!--                                IDE's-->
+                                <div class="slider__item">
+                                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                                        <div class="card-header">{ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="24px" height="24px" alt="vs-code"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-plain.svg" width="24px" height="24px" alt="vim"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-plain.svg" width="24px" height="24px" alt="intellij">  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webstorm/webstorm-plain.svg" width="24px" height="24px" alt="webstorm"> }</div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">IDE's</h5>
+                                            <p class="card-text">
+                                            <ul>
+                                                <li>I love VS Code, it's my go-to IDE for most projects</li>
+                                                <li>I have years of experience working in Vim</li>
+                                                <li>IntelliJ and Webstorm are two more "professional" IDE's that I have worked with</li>
+                                                <li>I am currently writing this website with Webstorm and it's been great so far!</li>
+                                            </ul>
+                                            <br>
+                                            </p>
+                                            <p>Proficiency: <code>Professional</code></p>
+                                        </div>
+                                    </div>
+                                </div>
 
                             </div>
+
                             <div class="slider__nav">
                                 <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
                                 <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
                             </div>
+
                         </div>
                         <h1 class="experience-closer">}</h1>
                     </div>
@@ -362,7 +413,7 @@
                     <div class="portfolio">
                         <h1 class="portfolio-header">portfolio ( ) {</h1>
                         <h3 class="contact-body-text">All source code can be found on my <a class="clicky-text" href="https://github.com/HansonSoftware" target="_blank">GitHub</a>.</h3>
-                        <div id="carouselExampleCaptions" class="carousel slide bg-dark" data-bs-ride="carousel">
+                        <div id="carouselExampleCaptions" class="carousel slide bg-dark" data-interval="false">
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -380,98 +431,103 @@
 
                             <div class="carousel-inner">
 
-
+<!--                                Pocket Recipes-->
                                 <div class="carousel-item active">
-                                    <img src="img/graph-sim.gif" class="d-block w-100" height="500px" alt="...">
+                                    <img src="img/PocketRecipes.png" class="d-block w-100" height="500px" alt="...">
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5>Pocket Recipes 👨‍🍳</h5>
-                                        <p>Photos coming soon...</p>
+                                        <a class="clicky-text" href="https://github.com/HansonSoftware/Pocket-Recipes" target="_blank"><h5>Pocket Recipes 👨‍🍳</h5></a>
+                                        <p>Flutter, SpringBoot, MongoDB</p>
+                                    </div>
+                                </div>
+
+<!--                                UNIX Shell-->
+                                <div class="carousel-item">
+                                    <img src="./img/Taskman.png" class="d-block w-100" width="200px" height="500px" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>UNIX Shell 🔒</h5>
+                                        <p>Objective C</p>
+                                    </div>
+                                </div>
+
+<!--                                FloatingPointCalculator-->
+                                <div class="carousel-item">
+                                    <img src="./img/FloatingPointCalculator.png" class="d-block w-100" width="200px" height="500px" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Floating Point Calculator 🔒</h5>
+                                        <p>Objective C</p>
+                                    </div>
+                                </div>
+
+<!--                                ProcessSceduler-->
+                                <div class="carousel-item">
+                                    <img src="./img/ProcessScheduler.png" class="d-block w-100" width="200px" height="500px" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Process Scheduler 🔒</h5>
+                                        <p>Objective C</p>
                                     </div>
                                 </div>
 
 
                                 <div class="carousel-item">
-                                    <img src="./img/binary-code.png" class="d-block w-100" width="200px" height="500px" alt="...">
+                                    <img src="./img/GraphAlgo.png" class="d-block w-100" width="200px" height="500px" alt="...">
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5>UNIX Shell</h5>
-                                        <p>Photos coming soon...</p>
+                                        <h5>Graph Algorithm Visualizer 🔒</h5>
+                                        <p>Java</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./img/HuffmanCoding.png" class="d-block w-100" width="200px" height="500px" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Huffman Coding 🔒</h5>
+                                        <p>Java</p>
                                     </div>
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="./img/binary-code.png" class="d-block w-100" width="200px" height="500px" alt="...">
+                                    <img src="./img/MiniInterpreter.png" class="d-block w-100" width="200px" height="500px" alt="...">
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5>Floating Point Calculator</h5>
-                                        <p>Photos coming soon...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./img/binary-code.png" class="d-block w-100" width="200px" height="500px" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Process Scheduler</h5>
-                                        <p>Photos coming soon...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./img/binary-code.png" class="d-block w-100" width="200px" height="500px" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Graph Algorithm Visualizer</h5>
-                                        <p>Photos coming soon...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./img/binary-code.png" class="d-block w-100" width="200px" height="500px" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Huffman Coding</h5>
-                                        <p>Photos coming soon...</p>
+                                        <h5>Mini Interpreter 🔒</h5>
+                                        <p>Java</p>
                                     </div>
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="./img/binary-code.png" class="d-block w-100" width="200px" height="500px" alt="...">
+                                    <img src="./img/PowerConnectFour.png" class="d-block w-100" width="200px" height="500px" alt="...">
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5>Mini Interpreter</h5>
-                                        <p>Photos coming soon...</p>
+                                        <h5>Power Connect Four 🔒</h5>
+                                        <p>Java</p>
                                     </div>
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="./img/binary-code.png" class="d-block w-100" width="200px" height="500px" alt="...">
+                                    <img src="./img/Portfolio.png" class="d-block w-100" width="200px" height="500px" alt="...">
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5>Power Connect Four</h5>
-                                        <p>Photos coming soon...</p>
+                                        <a class="clicky-text" href="https://github.com/HansonSoftware/Portfolio-Website-V1" target="_blank"><h5>Portfolio Website V1</h5></a>
+                                        <p>HTML, CSS, JavaScript</p>
                                     </div>
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="./img/binary-code.png" class="d-block w-100" width="200px" height="500px" alt="...">
+                                    <img src="./img/FlutterCalculator.png" class="d-block w-100" width="200px" height="500px" alt="...">
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5>Portfolio Website V1</h5>
-                                        <p>Photos coming soon...</p>
+                                        <a class="clicky-text" href="https://github.com/GenericStartup/Flutter-Calculator" target="_blank"><h5>Flutter Calculator 🖩</h5></a>
+                                        <p>Flutter, Dart</p>
                                     </div>
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="./img/" class="d-block w-100" width="200px" height="500px" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Flutter Calculator</h5>
-                                        <p>Photos coming soon...</p>
-                                    </div>
-                                </div>
-
-                                <div class="carousel-item">
-                                    <img src="./img/binary-code.png" class="d-block w-100" width="200px" height="500px" alt="...">
+                                    <img src="./img/Corporate.png" class="d-block w-100" width="200px" height="500px" alt="...">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h5>Corporate™</h5>
-                                        <p>Photos coming soon...</p>
+                                        <p>C#</p>
                                     </div>
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="./img/binary-code.png" class="d-block w-100" width="200px" height="500px" alt="...">
+                                    <img src="./img/BankStatementsAnalyzer.png" class="d-block w-100" width="200px" height="500px" alt="...">
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5>Bank Statements Analyzer</h5>
-                                        <p>Photos coming soon...</p>
+                                        <a class="clicky-text" href="https://github.com/HansonSoftware/Bank-Statements-Analyzer" target="_blank"><h5>Bank Statements Analyzer</h5></a>
+                                        <p>Java</p>
                                     </div>
                                 </div>
 
@@ -487,7 +543,7 @@
                             </button>
                         </div>
 
-                        <h3 class="contact-body-text">Some of the projects shown are listed as <code>private</code> to abide by my universities honor code policy.</h3>
+                        <h3 class="contact-body-text">Some of the projects shown are listed as <code>private 🔒</code> to abide by my universities honor code policy.</h3>
                         <h3 class="contact-body-text"><code>If you would like to see code samples from those projects, my contact info can be found below.</code></h3>
                         <h1 class="portfolio-closer">}</h1>
 
