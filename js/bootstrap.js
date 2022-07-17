@@ -3512,7 +3512,7 @@
     }
 
     const domParser = new window.DOMParser();
-    const createdDocument = domParser.parseFromString(unsafeHtml, 'text/html');
+    const createdDocument = domParser.parseFromString(unsafeHtml, 'text/tools');
     const elements = [].concat(...createdDocument.body.querySelectorAll('*'));
 
     for (let i = 0, len = elements.length; i < len; i++) {
@@ -3891,7 +3891,7 @@
       if (!content && templateElement) {
         templateElement.remove();
         return;
-      } // we use append for html objects to maintain js events
+      } // we use append for tools objects to maintain js events
 
 
       this.setElementContent(templateElement, content);

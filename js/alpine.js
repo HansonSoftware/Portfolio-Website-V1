@@ -2546,7 +2546,7 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
         });
     });
 
-    // packages/alpinejs/src/directives/x-html.js
+    // packages/alpinejs/src/directives/x-tools.js
     directive("html", (el, {expression}, {effect: effect3, evaluateLater: evaluateLater2}) => {
         let evaluate2 = evaluateLater2(expression);
         effect3(() => {

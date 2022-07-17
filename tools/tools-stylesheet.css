@@ -1,0 +1,243 @@
+/* Author: Hayden Hanson */
+/* Heyo! If you're reading this i'd like to point out that although most of the code here is my own, some sections have come from various inspirational sources.
+   Thanks for stopping by :D ! */
+
+/* body */
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+/* CSS Variables */
+
+:root {
+    --primary-color: #fe5196;
+    --primary-color2: #f77062;
+    --title-color: white;
+    --text-color: #777777;
+    --border-color: #201f17;
+    --gradient-color: linear-gradient(90deg, #f77062 0%, #fe5196 100%);
+    --background-color: #212529;
+
+    --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+
+    --scrollcolor: #fff;
+    --scrollbackground: #909294;
+
+}
+
+/* font-face Used throughout the site */
+
+@font-face {
+    font-family: Lato;
+}
+
+.clicky-text:link{
+    color: white;
+    text-decoration: underline;
+}
+.clicky-text:visited{
+    color: white;
+    text-decoration: none;
+}
+.clicky-text:hover{
+    color: var(--primary-color2);
+    text-decoration: none;
+}
+.clicky-text:active{
+    color: black;
+    text-decoration: none;
+}
+
+/* Start Navigation */
+
+.main-menu .navbar{
+    padding: 1rem 3.5rem;
+}
+
+.main-menu .nav-item .nav-link {
+    padding: 1.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--title-color);
+}
+
+.main-menu .navbar-nav .active {
+    background: var(--primary-color2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-menu .navbar-nav a:hover{
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar-toggler {
+    color: white;
+}
+
+.navbar-toggler:hover {
+    color: white;
+}
+
+.navbar-toggler:active {
+    color: white;
+}
+
+.navbar-back-button {
+    color: var(--primary-color2);
+}
+
+.navbar-back-button:hover {
+    background: var(--background-color);
+    color: white;
+    fill: var(--gradient-color);
+}
+
+/* End Navigation */
+
+/* Start GPA Calculator Area */
+
+.gpa-calculator-section {
+    border: double white;
+}
+
+.gpa-text {
+    alignment: center;
+    color: white;
+}
+
+/* End GPA Calculator Area */
+
+/* Start Timer Area */
+
+.timer-section {
+    border: double white;
+}
+
+.timer-text {
+    alignment: center;
+    color: white;
+}
+
+.stopwatch-section {
+    border: double white;
+}
+
+/* End Timer Area */
+
+/* Start footer area */
+
+.social-icon:link{
+    color: var(--background-color);
+}
+.social-icon:visited{
+    color: var(--background-color);
+}
+.social-icon:hover{
+    color: var(--background-color);
+}
+.social-icon:active{
+    color: white;
+}
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+}
+
+.wrapper .icon {
+    position: relative;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+    background: #1877F2;
+    color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: #1DA1F2;
+    color: #ffffff;
+}
+
+.wrapper .top:hover,
+.wrapper .top:hover .tooltip,
+.wrapper .top:hover .tooltip::before {
+    background: #E4405F;
+    color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+    background: #333333;
+    color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+    background: #CD201F;
+    color: #ffffff;
+}
+
+/* end footer area */
