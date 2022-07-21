@@ -101,35 +101,45 @@ html, body{
 
 /* End Navigation */
 
+.h1-text {
+    alignment: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.p-text {
+    color: white;
+}
+
 /* Start GPA Calculator Area */
 
 .gpa-calculator-section {
-    border: double white;
+    margin:10px;
+    height: 450px;
 }
 
 .gpa-text {
-    alignment: center;
+    color: white;
+}
+
+.gpa-total {
     color: white;
 }
 
 /* End GPA Calculator Area */
 
-/* Start Timer Area */
+/* Start Base Converter Area */
 
-.timer-section {
-    border: double white;
+.base-converter {
+    margin:10px;
+    height: 450px;
 }
 
-.timer-text {
-    alignment: center;
+.result {
     color: white;
 }
 
-.stopwatch-section {
-    border: double white;
-}
-
-/* End Timer Area */
+/* End Base Converter Area */
 
 /* Start footer area */
 

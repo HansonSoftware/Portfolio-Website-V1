@@ -7,9 +7,6 @@
     <link rel = "stylesheet" href = "tools-stylesheet.css">
     <link rel = "stylesheet" href = "../css/bootstrap-css/bootstrap.min.css">
 
-    <script src ="tools-js.js"></script>
-    <script src ="../js/bootstrap.min.js"></script>
-
 </head>
 <body>
 
@@ -34,22 +31,13 @@
                     <div class="ms-auto"></div>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#">🔨</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#gpa">GPA Calculator</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#experience">Timer</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">Stopwatch</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Base Converter</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Calendar</a>
+                            <a class="nav-link" href="#base-converter">Base Converter</a>
                         </li>
                     </ul>
                 </div>
@@ -72,58 +60,10 @@
         <div class="container">
             <div class="row">
                 <div class="gpa-calculator-section">
-                    <h1 class="gpa-text">GPA Calculator</h1>
-                    <script>
-                        // (A) SCORE SHEET & SUBJECTS
-                        var scores = {
-                            Grade: 0,
-                            A: 4, B: 3, C: 2, D: 1, F: 0
-                        };
-                        var subjects = [
-                            "Class 1", "Class 2", "Class 3", "Class 4", "Class 5"
-                        ];
-                    </script>
-                    <script>
-                        // (B) DRAW HTML
-                        window.addEventListener("load", () => {
-                            let wrapper = document.getElementById("gpa-wrap"),
-                                table = document.createElement("table"),
-                                row = table.insertRow(),
-                                cell = null, selector = null, option = null;
-                            for (let s of subjects) {
-                                cell = row.insertCell();
-                                cell.innerHTML = s;
-                                cell = row.insertCell();
-                                selector = document.createElement("select");
-                                cell.appendChild(selector);
-                                for (let grade in scores) {
-                                    option = document.createElement("option");
-                                    option.innerHTML = grade;
-                                    option.value = scores[grade];
-                                    selector.appendChild(option);
-                                    selector.onchange = gpacalc;
-                                }
-                                row = table.insertRow();
-                            }
-                            wrapper.appendChild(table);
-                            gpacalc();
-                        });
-                        // (C) CALCULATE FUNCTION
-                        var gpacalc = () => {
-                            let all = document.querySelectorAll("#gpa-wrap select"),
-                                score = 0;
-                            for (let i of all) {
-                                // Use parseFloat if decimals are involved.
-                                score += parseInt(i.value);
-                            }
-                            document.getElementById("gpa-total").innerHTML = score;
-                            document.getElementById("gpa-average").innerHTML = score / all.length;
-                        };
-                    </script>
-                    <!-- (B) HTML -->
+                    <h1 class="h1-text" align="center">GPA Calculator</h1>
                     <div class="gpa-text" id="gpa-wrap"></div>
-                    <div>
-                        Total Points: <span id="gpa-total">0</span>
+                    <div class="gpa-total">
+                        Total Points Earned: <span id="gpa-total">0</span>
                     </div>
                     <div class="gpa-text">
                         GPA: <span id="gpa-average">0</span>
@@ -142,22 +82,28 @@
 
     <!----------------------------------------- End GPA Calculator ----------------------------------->
 
-    <!----------------------------------------- Start Timer ----------------------------------->
 
-    <section class="clock-section bg-dark" id="clock">
+    <!----------------------------------------- Start Base Converter ----------------------------------->
+
+    <section class="base-converter-section bg-dark" id="base-converter">
         <div class="container">
             <div class="row">
-                <div class="timer-section" style="width: 100px; float:left; height:100px; background:gray; margin:10px">
-                    <h1 class="timer-text">Timer</h1>
-                </div>
-                <div class="stopwatch-section" style="width: 100px; float:left; height:100px; background:yellow; margin:10px">
-                    <h1 class="timer-text">Stopwatch</h1>
+                <div class="base-converter">
+                    <h1 class="h1-text" align="center">Base Converter</h1>
+                    <p class="p-text"> Enter a number: <input type="number" min=0 max=281474976710655 value=0 id="numToConvert"/><br>
+                    Once you have entered the number, click one of the three buttons below to complete the conversion.</p>
+                    <button class="base-converter-button" type="button" onclick="toBin()">Binary</button>
+                    <button class="base-converter-button" type="button" onclick="toHex()">Hexadecimal</button>
+                    <button class="base-converter-button" type="button" onclick="toOct()">Octal</button>
+                    <p class="p-text" id="num" class="result"></p>
+                    <p class="p-text" id="base" class="result"></p>
+                    <p class="p-text" id="result" class="result"></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!----------------------------------------- End Timer ----------------------------------->
+    <!----------------------------------------- End Base Converter ----------------------------------->
 
 
 
@@ -228,6 +174,8 @@
 <!--------------------------------------------------------- End Footer Area --------------------------------------------------------->
 <!----------------------------------------------------------------------------------------------------------------------------------->
 
+<script src ="tools-js.js"></script>
+<script src ="../js/bootstrap.min.js"></script>
 
 </body>
 </html>

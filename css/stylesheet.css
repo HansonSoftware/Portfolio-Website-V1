@@ -186,7 +186,7 @@ html, body{
 /* End about me section */
 
 .card {
-    height: 200%;
+    display: flex;
 }
 
 .card-header {
